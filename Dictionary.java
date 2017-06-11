@@ -1,4 +1,3 @@
-package CodeU_Assignment3;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -19,6 +18,7 @@ public class Dictionary {
 	public Dictionary(HashSet<String> d){
 		this.dictionary = d;
 	}
+	
 	public boolean isWord(String str){
 		return this.dictionary.contains(str);
 	}
