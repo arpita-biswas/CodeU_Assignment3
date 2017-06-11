@@ -1,4 +1,4 @@
-package CodeU_Assignment3;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
@@ -209,6 +209,7 @@ public class Q1 {
 		testAdjacentTraversal();
 		testPrefixWord();//If prefix is a word, traversal should continue to look for a longer word
 		testDepthFirstSearch(); //Test if the depth first search traversal is working properly
+		testExample();
 	}
 	
 	@Test
