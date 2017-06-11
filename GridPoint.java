@@ -1,4 +1,3 @@
-package CodeU_Assignment3;
 
 /**
  * Implemented GridPoint class to represent a cell in the grid.
