@@ -11,3 +11,13 @@ Assume you have a dictionary class with these two methods:
 ● isPrefix(string): Returns whether the given string is a prefix of at least one word in the dictionary.  
 
 The function receives the number of rows, number of columns, a 2-dimensional array of characters (of the native char data type), and the dictionary. Return the set of all words found.
+
+## Solution:  
+
+Assumption: The current implementation is case sensitive. 
+
+For each cell in the grid, do a depth first based traversal (where the next node to travel is one of the adjacent cells). The pruning steps are:  
+1. If all adjacent nodes are visited, then backtrack.
+2. If the current node of the path being traversed is not a prefix of any word in the dictionary, then stop traversing that path and backtrack.   
+If the path till current node is a valid dictionary word, then add it to the set of string to be returned.
+
