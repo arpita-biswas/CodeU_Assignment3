@@ -18,7 +18,11 @@ public class GridPoint {
 		if(this.r == g.r && this.c == g.c){
 			return true;
 		}
-		return false;
-		
+		return false;		
+	}
+	
+	@Override
+	public String toString(){
+		return "("+this.r+","+this.c+")";		
 	}
 }
