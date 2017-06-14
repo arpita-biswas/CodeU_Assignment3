@@ -160,17 +160,17 @@ public class Q1 {
 	}
 
 	public static void main(String[] args) {
-//		testNullDictionary();
-//		testEmptyDictionary();
-//		testNullGrid();
-//		testEmptyGrid();
-//		testInvalidRowColumnDimension();
-//		testOneCellGrid();
-//		testNonRepeatationOfCells();
+		testNullDictionary();
+		testEmptyDictionary();
+		testNullGrid();
+		testEmptyGrid();
+		testInvalidRowColumnDimension();
+		testOneCellGrid();
+		testNonRepeatationOfCells();
 		testAdjacentTraversal();
-//		testPrefixWord();//If prefix is a word, traversal should continue to look for a longer word
-//		testDepthFirstSearch(); //Test if the depth first search traversal is working properly
-//		testExample();
+		testPrefixWord();//If prefix is a word, traversal should continue to look for a longer word
+		testDepthFirstSearch(); //Test if the depth first search traversal is working properly
+		testExample();
 	}
 	
 	@Test
