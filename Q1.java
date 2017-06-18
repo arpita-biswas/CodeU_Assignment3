@@ -40,8 +40,13 @@ public class Q1 {
 		}
 		
 		//if n_row and n_column does not match the actual dimension of the grid, return null
-		if(grid.length != n_row || grid[0].length != n_column){
+		if(grid.length != n_row){
 			return null;
+		}
+		for(int i=0; i<n_row; i++){
+			if(grid[i].length != column){
+				return null;
+			}
 		}
 				
 		//Create a HashSet that stores all the "dictionary" words that
@@ -82,29 +87,29 @@ public class Q1 {
 	 */
 	private static Set<GridPoint> move(int r, int c, int n_row, int n_column){
 		Set<GridPoint> valid_directions = new HashSet<GridPoint>();
-		if(r != 0 ){
-				valid_directions.add(new GridPoint(r-1, c));
+		if(r != 0 ){//up
+			valid_directions.add(new GridPoint(r-1, c));
 		}
-		if(!(r == 0 || c == n_column-1)){
-				valid_directions.add(new GridPoint(r-1, c+1));
+		if(!(r == 0 || c == n_column-1)){//up and right
+			valid_directions.add(new GridPoint(r-1, c+1));
 		}
-		if(c != n_column-1){
-				valid_directions.add(new GridPoint(r, c+1));
+		if(c != n_column-1){//right
+			valid_directions.add(new GridPoint(r, c+1));
 		}
-		if(!(r == n_row-1 || c == n_column-1)){
+		if(!(r == n_row-1 || c == n_column-1)){//down and right
 			valid_directions.add(new GridPoint(r+1, c+1));
 		}
-		if(r != n_row-1){
-				valid_directions.add(new GridPoint(r+1, c));
+		if(r != n_row-1){//down
+			valid_directions.add(new GridPoint(r+1, c));
 		}
-		if(!(r == n_row-1 || c == 0)){
+		if(!(r == n_row-1 || c == 0)){//down and left
 			valid_directions.add(new GridPoint(r+1, c-1));
 		}
-		if(c != 0){
-				valid_directions.add(new GridPoint(r, c-1));
+		if(c != 0){//left
+			valid_directions.add(new GridPoint(r, c-1));
 		}
-			if(!(r == 0 || c == 0)){
-				valid_directions.add(new GridPoint(r-1, c-1));
+		if(!(r == 0 || c == 0)){//up and left
+			valid_directions.add(new GridPoint(r-1, c-1));
 		}
 		return valid_directions;		
 	}
