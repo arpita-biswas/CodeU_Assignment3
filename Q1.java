@@ -44,7 +44,7 @@ public class Q1 {
 			return null;
 		}
 		for(int i=0; i<n_row; i++){
-			if(grid[i].length != column){
+			if(grid[i].length != n_column){
 				return null;
 			}
 		}
